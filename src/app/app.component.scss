@@ -1,0 +1,95 @@
+
+
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.head {
+    margin: 0;
+}
+
+  .navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+
+    flex-direction: row;
+    background-image: url("https://t4.ftcdn.net/jpg/00/07/87/11/360_F_7871168_GJ7wUZk59pJLlXGsd4xFlhHkx9jCSTZZ.jpg");
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .left-section {
+    flex: 1;
+    h1 {
+        font-size: 4em;
+    }
+  }
+  
+  .right-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-container {
+    display: flex;
+    position: relative;
+    margin-right: 20px; /* Add margin to create spacing between the profile photo and dropdown */
+  }
+  
+  .profile-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ccc; /* You can replace this with an actual image */
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    display: inline-block;
+    margin-right: 10px; /* Adjust spacing between buttons */
+  }
+  
+
+
+
+
+  nav {
+    overflow: hidden;
+    background-color: #4e68ff;
+    position: relative;
+    display: flex;
+    ul {
+      text-align: center;
+      list-style-type: none;
+      list-style-type: none;
+      margin: 0;
+      padding: 15px;
+      li {
+        display: inline;
+        font-family: "Fira Sans", sans-serif;
+        font-size: 17px;
+        a {
+          color: #f2f2f2;
+          text-decoration: none;
+          padding: 14px;
+          &:hover {
+            background-color: #111;
+          }
+        }
+      }
+    }
+  }
