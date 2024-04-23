@@ -9,12 +9,21 @@
     <div class="right-section">
       <div class="profile-container">
         <nav>
-        <div class="profile-photo"></div>
         
+        @if (authService.currentUserSig() == null) {
+          <div class="profile-photo"><img alt="avatar" class="avatar" src="https://www.svgrepo.com/show/452030/avatar-default.svg"/></div>
           <ul>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
+            <li><a href="login">Login</a></li>
+            <li><a href="register">Register</a></li>
           </ul>
+        }
+        @if (authService.currentUserSig()) {
+          <div class="profile-photo"><img alt="avatar" class="avatar" src="https://www.svgrepo.com/show/452030/avatar-default.svg"/></div>
+          <ul>
+            <li><a href=''> Welcome {{ authService.currentUserSig()?.username }} </a></li>
+            <li><a (click)="logout()">Logout</a></li>
+          </ul>
+        }
         </nav>
       </div>
     </div>
@@ -23,6 +32,9 @@
   <nav>
     <ul>
       <li><a href=''>Home</a></li>
+      @if (authService.currentUserSig()) {
+        <li><a href='project-list'>My Trips</a></li>
+      }
       <li><a href='#'>About</a></li>
       <a href="#" id="menu-icon"></a>
     </ul>
